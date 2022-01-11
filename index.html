@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>
+            Body_Mass_Index
+        </title>
+    <body>
+        <h1>
+            <center>
+                BMI Introduction
+            </h1>
+        </center>
+                BMI is a measurement of a person's leanness or corpulence based on their height and weight, and is intended to quantify tissue mass. 
+                It is widely used as a general indicator of whether a person has a healthy body weight for their height. 
+                Specifically, the value obtained from the calculation of BMI is used to categorize whether a person is underweight, normal weight, 
+                overweight, or obese depending on what range the value falls between. These ranges of BMI vary based on factors such as region and age, 
+                and are sometimes further divided into subcategories such as severely underweight or very severely obese. 
+                Being overweight or underweight can have significant health effects,
+                so while BMI is an imperfect measure of healthy body weight, 
+                it is a useful indicator of whether any additional testing or action is required.
+
+
+
+
+
+
+<div>
+<form name="techBMI">
+    <center>
+        
+<h3>BMI Calculator</h3>
+<br/>
+
+<input type="text" name="weight" placeholder="Enter Weight (kg)" size="20"><br /><br/>
+<input type="text" name="height" placeholder="Enter Height (Meters)" size="20"><br /><br/>
+<input class="decoration-one px-3 py-2" type="button" value="Calculate BMI" onClick="calculateBmi()"><br /><br/>
+<input type="text" name="bmi" placeholder="Your BMI Will be here" size="20"><br /><br/>
+<input type="text" name="meaning" size="35"><br /><br/>
+<input class="decoration-one px-3 py-2" type="reset" value="Reset" />
+<br/>
+
+</form>
+</div>
+</center>
+
+<script>
+    function calculateBmi() {
+var weight = document.techBMI.weight.value
+var height = document.techBMI.height.value
+if(weight > 0 && height > 0){   
+var finalBmi = weight/(height*height)
+document.techBMI.bmi.value = finalBmi.toFixed(3);
+if(finalBmi < 18.5){
+document.techBMI.meaning.value = "You are unhealthy, too thin."
+    }
+if(finalBmi > 18.5 && finalBmi < 25){
+document.techBMI.meaning.value = "You are healthy enough."
+    }
+if(finalBmi > 25 &&  finalBmi <30){
+document.techBMI.meaning.value = "You have overweight."
+    }
+if(finalBmi > 30){
+document.techBMI.meaning.value = "Your condition is serious."
+    }
+    }
+    else{
+    alert("Data you've entered might be incorrect. Please check and try again.")
+    }
+
+}
+</script>
+<h1>
+                Risks associated with being overweight
+            </h1>
+            Being overweight increases the risk of a number of serious diseases and health conditions. Below is a list of said risks, according to the Centers for Disease Control and Prevention (CDC):
+            <ol>
+                <li>High blood pressure</li>
+                <li>Higher levels of LDL cholesterol, which is widely considered "bad cholesterol," lower levels of HDL cholesterol, considered to be good cholesterol in moderation, and high levels of triglycerides</li>
+                <li>Type II diabetes</li>
+                <li>Coronary heart disease</li>
+                <li>Stroke</li>
+                <li>Gallbladder disease</li>
+                <li>Osteoarthritis, a type of joint disease caused by breakdown of joint cartilage</li>
+                <li>Sleep apnea and breathing problems</li>
+                <li>Certain cancers (endometrial, breast, colon, kidney, gallbladder, liver)</li>
+                <li>Mental illnesses such as clinical depression, anxiety, and others</li>
+                <li>Body pains and difficulty with certain physical functions</li>
+                 </ol>
+            As can be seen from the list above, there are numerous negative, in some cases fatal, outcomes that may result from being overweight. 
+            Generally, a person should try to maintain a BMI below 25 kg/m2, but ideally should consult their doctor to determine whether or not they
+            need to make any changes to their lifestyle in order to be healthier.
+            <h1>
+                Risks associated with being underweight
+            </h1>
+            Being underweight has its own associated risks, listed below:
+            <ol>
+                <li>Malnutrition, vitamin deficiencies, anemia (lowered ability to carry blood vessels)</li>
+                <li>Osteoporosis, a disease that causes bone weakness, increasing the risk of breaking a bone</li>
+                <li>A decrease in immune function</li>
+                <li>Growth and development issues, particularly in children and teenagers</li>
+                <li>Possible reproductive issues for women due to hormonal imbalances that can disrupt the menstrual cycle. 
+                Underweight women also have a higher chance of miscarriage in the first trimester</li>
+                <li>Potential complications as a result of surgery</li>
+                <li>Generally, an increased risk of mortality compared to those with a healthy BMI</li>
+            </ol>
+            In some cases, being underweight can be a sign of some underlying condition or disease such as anorexia nervosa, which has its own risks. 
+            Consult your doctor if you think you or someone you know is underweight, particularly if the reason for being underweight does not seem obvious.</body>
+
+    
+<style>
+     *   {
+    box-sizing: border-box;
+}
+.decoration-one {
+    background-color:rgb(249, 154, 154);
+    margin: 0;
+    border:0;
+    border-radius: 12px;
+    padding: 9px;
+    font-weight: bold;
+}
+.decoration-one:hover {
+    background-color:yellow;
+
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+
+</style>  
+
+    
